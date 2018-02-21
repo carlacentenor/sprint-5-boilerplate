@@ -37,9 +37,20 @@ function handleResponse(data) {
 
 
 $.ajax({
-  url: 'http://examen-laboratoria-sprint-5.herokuapp.com/topics'
+  url: 'http://examen-laboratoria-sprint-5.herokuapp.com/topics',
+  success: function() {
+    search.on('keyup', function() {
+      var value = $(this).val().toLowerCase();
+      $('#container .col-12').filter(function() {
+        $(this).toggle($(this)
+          .text()
+          .toLowerCase()
+          .indexOf(value) > -1);
+        console.log($(this).text());
+      });
+    });
+  }
 }).done(handleResponse);
-
 
 function createTheme() {
   let user = userTopic.val();
