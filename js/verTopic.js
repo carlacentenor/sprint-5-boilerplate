@@ -8,14 +8,14 @@ let contMessage = $('.container-message');
 let id = localStorage.id;
 
 function getInfo() {
-  let url = `http://examen-laboratoria-sprint-5.herokuapp.com/topics/${id}`;
+  let url = `https://examen-laboratoria-sprint-5.herokuapp.com/topics/${id}`;
   $.ajax({
     url: url
   }).done(showInfo);
 }
 
 function getMessage() {
-  let url = `http://examen-laboratoria-sprint-5.herokuapp.com/topics/${id}/responses`;
+  let url = `https://examen-laboratoria-sprint-5.herokuapp.com/topics/${id}/responses`;
   $.ajax({
     url: url
   }).done(showMessage);
@@ -60,7 +60,7 @@ function createMessage() {
     'topic_id': id
   };
 
-  let url = `http://examen-laboratoria-sprint-5.herokuapp.com/topics/${id}/responses`;
+  let url = `https://examen-laboratoria-sprint-5.herokuapp.com/topics/${id}/responses`;
 
   $.ajax({
     type: 'POST',

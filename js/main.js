@@ -37,7 +37,7 @@ function handleResponse(data) {
 
 
 $.ajax({
-  url: 'http://examen-laboratoria-sprint-5.herokuapp.com/topics',
+  url: 'https://examen-laboratoria-sprint-5.herokuapp.com/topics',
   success: function() {
     search.on('keyup', function() {
       var value = $(this).val().toLowerCase();
@@ -60,7 +60,7 @@ function createTheme() {
     'content': content
   };
 
-  let url = 'http://examen-laboratoria-sprint-5.herokuapp.com/topics';
+  let url = 'https://examen-laboratoria-sprint-5.herokuapp.com/topics';
 
   $.ajax({
     type: 'POST',
