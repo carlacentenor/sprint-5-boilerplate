@@ -46,7 +46,7 @@ $.ajax({
           .text()
           .toLowerCase()
           .indexOf(value) > -1);
-        console.log($(this).text());
+        // console.log($(this).text());
       });
     });
   }

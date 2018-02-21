@@ -1,0 +1,43 @@
+h5.card-title{
+  display: inline-block;
+}
+
+header {
+  margin: 0;
+  padding: 0;
+}
+
+.img-box, .container-topics {
+  padding: 0;
+}
+
+.header-title {
+  box-sizing: border-box;
+  background-color: #3B3E3F;
+  color: #F7B617;
+  padding: 1.5rem;
+}
+
+.header-title p {
+  color: rgba(222, 226, 228, 0.575);
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.header-title hr, button {
+  background-color: #F7B617;
+}
+
+.content-post-topic {
+  text-transform: uppercase;
+  color: #3B3E3F;
+  font-weight: 700;
+}
+
+.content-post-topic:hover {
+  color: #F7B617;
+}
+
+.card-header {
+  background-color: rgba(243, 194, 69, 0.39);
+}
