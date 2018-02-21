@@ -11,6 +11,17 @@ header {
   padding: 0;
 }
 
+.f3{
+  font-size: 3em;
+  text-decoration: none;
+  color: #F7B617;
+}
+
+.f3:hover{
+  color: rgb(223, 160, 14);
+}
+
+
 .header-title {
   background-color: #3B3E3F;
   color: #F7B617;
