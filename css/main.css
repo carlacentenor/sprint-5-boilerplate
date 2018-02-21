@@ -12,14 +12,13 @@ header {
 }
 
 .header-title {
-  box-sizing: border-box;
   background-color: #3B3E3F;
   color: #F7B617;
   padding: 1.5rem;
 }
 
 .header-title p {
-  color: rgba(222, 226, 228, 0.575);
+  color: #939393;
   font-weight: 500;
   font-size: 1.1rem;
 }
