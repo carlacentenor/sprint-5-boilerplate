@@ -7,16 +7,14 @@ let contMessage = $('.container-message');
 
 let id = localStorage.id;
 
-function getInfo(){
+function getInfo() {
   let url = `http://examen-laboratoria-sprint-5.herokuapp.com/topics/${id}`;
   $.ajax({
     url: url
   }).done(showInfo);
-  
-  
 }
 
-function getMessage(){
+function getMessage() {
   let url = `http://examen-laboratoria-sprint-5.herokuapp.com/topics/${id}/responses`;
   $.ajax({
     url: url
@@ -24,24 +22,21 @@ function getMessage(){
 }
 
 
-
-function showInfo(data){
-userTopic.text (data.author_name);
-message.text (data.content);
+function showInfo(data) {
+  userTopic.text(data.author_name);
+  message.text(data.content);
 }
 
-function showMessage(data){
-  data.forEach(function (element) {
-
-    let author= element.author_name;
+function showMessage(data) {
+  data.forEach(function(element) {
+    let author = element.author_name;
     let content = element.content;
  
-   templateMessage(author,content)
-
-  })
+    templateMessage(author, content);
+  });
 }
 
-function templateMessage(author,content){
+function templateMessage(author, content) {
   template = `<div class="card mt-3">
     <div class="card-header">
      <h5>${author}</h5>
@@ -53,7 +48,6 @@ function templateMessage(author,content){
     </div>
   </div>`;
   contMessage.prepend(template);
-  
 }
 
 
@@ -61,29 +55,26 @@ function createMessage() {
   let user = userMessage.val();
   let content = messagePost.val();
   let data = {
-    "author_name": user,
-    "content": content,
-    "topic_id":id
-  }
+    'author_name': user,
+    'content': content,
+    'topic_id': id
+  };
 
-  let url =   `http://examen-laboratoria-sprint-5.herokuapp.com/topics/${id}/responses`;
+  let url = `http://examen-laboratoria-sprint-5.herokuapp.com/topics/${id}/responses`;
 
   $.ajax({
-    type: "POST",
+    type: 'POST',
     url: url,
     data: data,
-    success: function(){
-      templateMessage(user,content)
+    success: function() {
+      templateMessage(user, content);
     },
 
   });
-
-  
 }
 
 
-
-btnCreateMessage.on('click',createMessage);
+btnCreateMessage.on('click', createMessage);
 
 getInfo();
-getMessage()
+getMessage();
